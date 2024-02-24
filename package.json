@@ -1,7 +1,8 @@
 {
   "name": "gulp-html-tailwind",  
+  "author": "Ibrahim kholil",  
   "version": "1.0.0",
-  "description": "A boilerplate for tailwind css, gulp and scss",
+  "description": "A starter pack for html, tailwindcss, gulp and scss",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
@@ -41,7 +42,6 @@
     "tailwindcss",
     "sass"
   ],
-  "author": "Softivus",
   "license": "ISC",
   "homepage": ""
 }
