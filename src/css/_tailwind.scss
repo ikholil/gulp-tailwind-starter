@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container {
+    @apply mx-auto px-3 sm:max-w-[540px] sm:px-0 md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] xxl:max-w-[1296px] xxxl:max-w-[75%];
+  }
+  .display-1 {
+    @apply text-4xl font-semibold leading-tight md:text-6xl lg:text-[70px] xl:text-[80px];
+  }
+  .display-3 {
+    @apply text-3xl font-semibold leading-tight md:text-5xl lg:text-[56px] xl:text-[64px];
+  }
+  .display-4 {
+    @apply text-3xl font-semibold leading-tight md:text-4xl lg:text-[48px] xl:text-[56px];
+  }
+  .btn {
+    @apply inline-flex items-center gap-2 rounded-[32px] border border-primary bg-primary px-3 py-1.5 text-sm font-medium text-n0 duration-300 hover:bg-transparent hover:text-primary sm:px-4 sm:py-2 md:text-base lg:px-6 xxl:px-8 xxl:py-2.5;
+  }
+  .btn-outline {
+    @apply btn bg-transparent text-primary hover:bg-primary hover:text-n0;
+  }
+  .btn-white {
+    @apply btn border-white bg-white text-primary hover:bg-white dark:border-bg3 dark:bg-bg3;
+  }
+  .box {
+    @apply rounded-xl bg-n0 p-3 shadow-[0px_6px_40px_0px_rgba(0,0,0,0.02)] dark:bg-bg4 sm:p-4 xl:p-6 xxxl:px-8;
+  }
+  .arrow-top {
+    @apply after:absolute after:top-[-12px] after:border-b-[12px] after:border-l-[12px] after:border-r-[12px] after:border-b-n0 after:border-l-transparent after:border-r-transparent dark:after:border-b-bg4 after:ltr:left-4 after:rtl:right-4;
+  }
+  .arrow-bottom {
+    @apply after:absolute after:bottom-[-12px] after:border-l-[12px] after:border-r-[12px] after:border-t-[12px] after:border-l-transparent after:border-r-transparent after:border-t-primary after:ltr:right-4 after:rtl:left-4;
+  }
+  .bb-dashed {
+    @apply border-b border-dashed border-primary/30;
+  }
+  .event-unset {
+    pointer-events: unset;
+  }
+}
+
+@layer base {
+  i {
+    font-size: 1.5rem;
+  }
+  a,
+  p,
+  span,
+  td {
+    @apply text-sm md:text-base;
+  }
+  h1 {
+    @apply text-3xl font-semibold leading-tight md:text-4xl xl:text-[48px];
+  }
+  h2 {
+    @apply text-xl font-semibold leading-tight sm:text-2xl lg:text-3xl xxxl:text-[40px];
+  }
+  h3 {
+    @apply text-xl font-medium leading-tight sm:font-semibold lg:text-2xl xxxl:text-[32px];
+  }
+  h4 {
+    @apply text-lg font-medium md:text-xl md:font-semibold xxxl:text-2xl;
+  }
+  h5 {
+    @apply text-base font-medium md:text-xl md:font-semibold;
+  }
+  h6 {
+    @apply text-base font-medium shadow-none;
+  }
+  input:focus,
+  textarea:focus {
+    @apply outline-none;
+  }
+}
+
+@layer utilities {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  table thead tr th:first-of-type {
+    @apply sm:rounded-tl-lg;
+  }
+
+  table thead tr th:last-of-type {
+    @apply sm:rounded-tr-lg;
+  }
+
+  table tbody tr:last-of-type td:first-of-type {
+    @apply sm:rounded-bl-lg;
+  }
+
+  table tbody tr:last-of-type td:last-of-type {
+    @apply sm:rounded-br-lg;
+  }
+  td {
+    vertical-align: middle !important;
+  }
+  input[type="date"]::-webkit-inner-spin-button,
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  input:checked + div {
+    @apply border-primary;
+  }
+  input:checked + div svg {
+    @apply block;
+  }
+  body {
+    font-family: "Inter", sans-serif;
+  }
+  input.picker[type="date"] {
+    position: relative;
+  }
+
+  input.picker[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    color: transparent;
+    background: transparent;
+  }
+}
